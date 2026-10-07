@@ -284,12 +284,19 @@
             <!-- Карточка питомца 2 -->
             <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow border border-amber-200 dark:border-gray-700 flex flex-col">
                 <div class="h-48 bg-amber-100 dark:bg-gray-700 relative flex items-center justify-center border-b border-amber-100 dark:border-gray-700">
-                    <img src="static/pet2.jpg" alt="Муся" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
-                    <div class="text-center p-4 text-gray-400">
+                    <!-- Загрузка pet2.jpg напрямую из корня репозитория -->
+                    <img src="pet2.jpg" 
+                         alt="Муся" 
+                         class="w-full h-full object-cover z-10" 
+                         onerror="this.style.display='none'; document.getElementById('placeholder-pet2').style.display='block';">
+                    
+                    <!-- Заглушка, если файл pet2.jpg еще не загружен в корень GitHub -->
+                    <div id="placeholder-pet2" class="text-center p-4 text-gray-400 hidden absolute">
                         <div class="text-5xl mb-1">🐈</div>
-                        <span class="text-xs">Фото питомца (pet2.jpg)</span>
+                        <span class="text-xs">Загрузите pet2.jpg в корень GitHub</span>
                     </div>
-                    <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase">Дома 🏠</span>
+                    
+                    <span class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase z-20">Дома 🏠</span>
                 </div>
                 <div class="p-5 flex-1 flex flex-col justify-between">
                     <div>
@@ -305,16 +312,22 @@
                     </button>
                 </div>
             </div>
-
             <!-- Карточка питомца 3 -->
             <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow border border-amber-200 dark:border-gray-700 flex flex-col">
                 <div class="h-48 bg-amber-100 dark:bg-gray-700 relative flex items-center justify-center border-b border-amber-100 dark:border-gray-700">
-                    <img src="static/pet3.jpg" alt="Балто" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden')">
-                    <div class="text-center p-4 text-gray-400">
+                    <!-- Загрузка pet3.jpg напрямую из корня репозитория -->
+                    <img src="pet3.jpg" 
+                         alt="Балто" 
+                         class="w-full h-full object-cover z-10" 
+                         onerror="this.style.display='none'; document.getElementById('placeholder-pet3').style.display='block';">
+                    
+                    <!-- Заглушка, если файл pet3.jpg еще не загружен в корень GitHub -->
+                    <div id="placeholder-pet3" class="text-center p-4 text-gray-400 hidden absolute">
                         <div class="text-5xl mb-1">🐕‍🦺</div>
-                        <span class="text-xs">Фото питомца (pet3.jpg)</span>
+                        <span class="text-xs">Загрузите pet3.jpg в корень GitHub</span>
                     </div>
-                    <span class="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase" data-i18n="status_searching">Ищем хозяина 🔍</span>
+                    
+                    <span class="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase z-20" data-i18n="status_searching">Ищем хозяина 🔍</span>
                 </div>
                 <div class="p-5 flex-1 flex flex-col justify-between">
                     <div>
@@ -330,9 +343,6 @@
                     </button>
                 </div>
             </div>
-
-        </div>
-    </section>
 
     <!-- БЛОК СВЯЗИ С НАМИ / WHATSAPP -->
     <section id="contacts" class="bg-amber-500 dark:bg-amber-600 text-white py-12">
