@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Указание ссылки на Карту сайта
+Sitemap: https://pet.chebur.shop/sitemap.xml
