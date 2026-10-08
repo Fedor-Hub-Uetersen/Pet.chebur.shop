@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    {% for page in pages %}
-    <url>
-        <loc>{{ page.loc }}</loc>
-        {% if page.lastmod %}<lastmod>{{ page.lastmod }}</lastmod>{% endif %}
-        {% if page.changefreq %}<changefreq>{{ page.changefreq }}</changefreq>{% endif %}
-        {% if page.priority %}<priority>{{ page.priority }}</priority>{% endif %}
-        {% if page.is_main %}
-        <!-- Поддержка двуязычности для поисковых роботов Google/Yandex -->
-        <xhtml:link rel="alternate" hreflang="ru" href="{{ page.loc }}?lang=ru"/>
-        <xhtml:link rel="alternate" hreflang="de" href="{{ page.loc }}?lang=de"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="{{ page.loc }}"/>
-        {% endif %}
-    </url>
-    {% endfor %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Главная страница -->
+  <url>
+    <loc>https://pet.chebur.shop/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Страница конструктора / заказа -->
+  <url>
+    <loc>https://pet.chebur.shop/constructor/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- О нас / Контакты -->
+  <url>
+    <loc>https://pet.chebur.shop/about/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
